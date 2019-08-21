@@ -8,7 +8,7 @@ const display = {
     display: 'none'
   };
   
-  class searchModal extends React.Component {
+  class SearchModal extends React.Component {
     constructor(props) {
       super(props);
       this.toggle = this.toggle.bind(this);
@@ -30,13 +30,13 @@ const display = {
         <div className="modal" style={this.state.toggle ? display : hide}>
         <div className="modal-content">
           <h4>Plan your trip</h4>
-          <div class="input-field">
+          <div className="input-field">
               <input placeholder="Where do you want to begin your trip?">
 
               </input>
           </div>
 
-          <div class="input-field">
+          <div className="input-field">
               <input placeholder="Where do you want to end your trip?">
 
               </input>
@@ -46,7 +46,7 @@ const display = {
 
 
         <div className="modal-footer">
-          <a className="btn" onClick={this.toggle}>submit</a>
+          <button className="btn" onClick={this.toggle}>submit</button>
         </div>
       </div>
       );
@@ -58,6 +58,6 @@ const display = {
     }
   }
   
-  ReactDOM.render(<searchModal />, document.getElementById("root"));
+//   ReactDOM.render(<SearchModal />, document.getElementById("root"));
 
-  export default searchModal;
+  export default SearchModal;

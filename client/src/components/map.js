@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 
-const text = "Wow wow wow"
 const MarkerComponent = ({ text }) => <div>{text}</div>;
 
 class Map extends Component {

@@ -14,7 +14,22 @@ router.route("/")
         console.log('user not logged in?');
     }
 
-      res.json({fuck:"off"});
+      res.json(req.session);
+  })
+// Matches with "/api/users/:id"
+router.route("/:id")
+  .get(function(req, res){
+      console.log(`get request made to /api/users/:id`);
+    //   console.log(res);
+    if (req.isAuthenticated()){
+        userController.getUser(req.params.id, function(err, user){
+            if (err) throw err;
+            res.json(user);
+        })
+    } else {
+        console.log('user not logged in. Denied');
+        res.json({error: "User not logged in"});
+    }
   })
 //   .post(userController.addUser);
 
@@ -24,6 +39,7 @@ router.route('/logout')
       console.log("logout request received");
       req.logOut();
       console.log(req.session);
+      res.json(req.session);
   })
 
 // Matches with "/api/users/signup"

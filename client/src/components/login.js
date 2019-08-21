@@ -3,8 +3,8 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+// import FormControlLabel from '@material-ui/core/FormControlLabel';
+// import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
@@ -64,6 +64,7 @@ export default function SignIn() {
             break;
             case 'password': updatePassword(value);
             break;
+            default: return;
         }
       };
 
@@ -77,7 +78,7 @@ export default function SignIn() {
         Axios.post("/api/users/login", user)
         .then(function(res){
             console.log(res.data);
-            // window.location = '/';
+            window.location = '/home';
         }).catch(function(err){
             console.log(err);
         })
@@ -126,6 +127,7 @@ export default function SignIn() {
                         autoComplete="email"
                         autoFocus
                         onChange={handleInputChange}
+                        className={"browser-default"}
                     />
                     <TextField
                         variant="outlined"
@@ -151,12 +153,12 @@ export default function SignIn() {
                         className={classes.submit}
                     >
                         Sign In
-          </Button>
+                    </Button>
                     <Grid container>
                         <Grid item xs>
                             <Link href="#" variant="body2">
                                 Forgot password?
-              </Link>
+                            </Link>
                         </Grid>
                         <Grid item>
                             <Link href="/signup" variant="body2">
@@ -167,12 +169,6 @@ export default function SignIn() {
                 </form>
             </div>
             <div>
-                <Link onClick={getUserInfo}href="#">
-                    Test Some Shit
-                </Link>
-                <Link onClick={logOut}href="#">
-                    Log Out
-                </Link>
             </div>
             <Box mt={8}>
                 <Copyright />
