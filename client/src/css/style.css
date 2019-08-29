@@ -1,11 +1,11 @@
 @media (max-width: 767px) {
   .navBottom {
     bottom: 0;
-    margin-bottom: 1rem;
     width: 100%;
     border-top: 0.1rem solid orange;
     display: flex;
     justify-content: space-between;
+    background: #465964;
   }
 }
 
