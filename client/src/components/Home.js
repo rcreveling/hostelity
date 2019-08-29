@@ -39,12 +39,7 @@ const Home = (props) => {
                             <Trips
                                 trips={user ? user.trips : []}
                             />
-                             <Trips
-                                trips={user ? user.trips : []}
-                            />
-                             <Trips
-                                trips={user ? user.trips : []}
-                            />
+                        
                         </div>
                     </div>
                 </Grid>
