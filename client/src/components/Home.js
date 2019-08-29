@@ -27,19 +27,18 @@ const Home = (props) => {
     };
     // console.log(user);
     return (
-            <Grid container direction="row" justify="center" alignItems="center" spacing={5}>
+            <Grid container direction="row" justify="center" alignItems="center" spacing={5} style={{backgroundColor:'#fffff2'}}>
                 <Grid item xs={12}>
                     <Profile
                         user={user ? user : {}}
                     />
                 </Grid>
-                <Grid item xs={10}>
+                <Grid item xs={6}>
                     <div className="tripz container">
                         <div className="col s12">
                             <Trips
                                 trips={user ? user.trips : []}
                             />
-                        
                         </div>
                     </div>
                 </Grid>

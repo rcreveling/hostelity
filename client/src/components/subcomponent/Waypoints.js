@@ -13,18 +13,18 @@ const Waypoints = (props) => {
                 return (
                     <div key={waypoint._id} className="tripSummary">
 
-                        <Typography align="center" variant="h6" gutterBottom>
+                        <Typography variant="h6" gutterBottom>
                             {wpIndex[i]}
                          </Typography>
                     
-                        <Typography align="center" component="p">
+                        <Typography component="p">
                             {waypoint.name}
                         </Typography>
                        
 
-                        <Typography variant="h6" gutterBottom>
+                        {/* <Typography variant="h6" gutterBottom>
                             Location: {waypoint.location[0]}, {waypoint.location[1]}
-                        </Typography>
+                        </Typography> */}
 
                         <Hostels hostels={waypoint.hostels} />
                        

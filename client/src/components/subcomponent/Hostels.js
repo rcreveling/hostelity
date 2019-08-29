@@ -9,14 +9,14 @@ const Hostels = (props) => {
                 return (
                     <div key={hostel._id} className="tripSummary">
 
-                        <Typography align="center" variant="h6" gutterBottom>
+                        <Typography variant="h6" gutterBottom>
                             Place name:
                          </Typography>
                     
-                        <Typography align="center" component="p">
+                        <Typography component="p">
                             {hostel.title}
                         </Typography>
-                        <hr></hr>
+
                     </div>
                 )
             })}

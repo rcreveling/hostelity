@@ -13,7 +13,6 @@ import Fab from '@material-ui/core/Fab';
 import Divider from '@material-ui/core/Divider';
 import MapFunctions from '../utils/gmAPI'
 import ReactDOM from 'react-dom';
-import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 
 // const google = window.google;
@@ -122,7 +121,6 @@ function Map(props) {
     return (
         // Important! Always set the container height explicitly
         <div className="map-container">
-        <Paper className={classes.root}>
             <Container fixed>
             <div className={classes.searchDiv}>
             <div id="form-top">
@@ -297,8 +295,6 @@ function Map(props) {
                 </div>
 
             </Container>
-
-        </Paper>
         </div>
     );
     
