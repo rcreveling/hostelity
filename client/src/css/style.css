@@ -29,14 +29,13 @@ html {
 body {
   padding: 0;
   margin: 0;
-  /* background: rgba(63, 63, 63, 0.295); */
  
 }
 
 .header {
   display: flex;
-  /* background: #465964; */
-  position: static;
+  background: #465964;
+  position: fixed;
   z-index: 1;
   /* height: 4.5rem; */
   border-bottom: 0.2rem solid orange;
