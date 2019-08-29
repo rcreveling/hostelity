@@ -30,13 +30,13 @@ const Navbar = (props) => {
                 {props.userId
                     ? <ul className="nav">
 
-                        <li key="home"><Link to='/home'><i className="material-icons" style={{ fontSize: 30 }}>home</i></Link></li>
+                        <li key="home"><Link to='/home'><i className="material-icons">home</i></Link></li>
 
-                        <li key="newTrip"><Link to='/map'><i className="material-icons" style={{ fontSize: 30 }}>search</i></Link></li>
+                        <li key="newTrip"><Link to='/map'><i className="material-icons">search</i></Link></li>
 
-                        <li key="my-trips"><Link to='/my-trips'><i className="material-icons" style={{ fontSize: 30 }}>airport_shuttle</i></Link></li>
+                        <li key="my-trips"><Link to='/my-trips'><i className="material-icons">airport_shuttle</i></Link></li>
 
-                        <li key="logOut"><Link to='javascript:;' onClick={logOut}><i className="material-icons" style={{ fontSize: 30 }}>exit_to_app</i></Link></li>
+                        <li key="logOut"><Link to='javascript:;' onClick={logOut}><i className="material-icons">exit_to_app</i></Link></li>
 
 
                     </ul>

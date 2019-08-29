@@ -4,7 +4,7 @@
     width: 100%;
     border-top: 0.1rem solid orange;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     background: #465964;
   }
 }
@@ -21,15 +21,14 @@
     margin-top: calc(-22vw);
 }
 
-html {
+/* html {
   padding: 0;
   margin: 0;
-}
+} */
 
 body {
   padding: 0;
   margin: 0;
- 
 }
 
 .header {
@@ -55,21 +54,25 @@ nav {
   z-index: 1;
   padding: 0;
   margin: 0;
+  width: 100%;
+}
+
+.navLinks {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 ul {
   display: flex;
   list-style-type: none;
   margin: 0;
+  width: 100%;
   padding: 0;
-  overflow: hidden;
-  justify-content: flex-end;
-  background: transparent;
+  /* overflow: hidden; */
 }
 
-
 li a {
-  display: block;
   color: rgba(83, 211, 204, 0.945);
   text-decoration: none;
 }
@@ -80,7 +83,14 @@ li a:hover {
 }
 
 li {
-  width: 100px;
+  height: 100%;
+  width: 100%;
+}
+
+.material-icons {
+  justify-content: center;
+  display: flex;
+  font-size: 30px;
 }
 
 .brand-logo img {
